@@ -1,0 +1,87 @@
+<div class='content'>
+    <h3 class="first">Toggleable Row Groups</h3>
+    <p-table [value]="cars" dataKey="brand">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Chassi</th>
+                <th>Ano</th>
+                <th>Cor</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-rowData let-rowIndex="rowIndex" let-expanded="expanded" let-columns="columns">
+            <tr class="ui-widget-header" *ngIf="rowGroupMetadata[rowData.marca].index === rowIndex">
+                <td colspan="3">
+                    <a href="#" [pRowToggler]="rowData">
+                        <i [ngClass]="expanded ? 'pi pi-fw pi-chevron-circle-down' : 'pi pi-fw pi-chevron-circle-right'" style="vertical-align: middle;padding-bottom: .1em;"></i>
+                        <span>{{rowData.marca}}</span>
+                    </a>
+                </td>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="rowexpansion" let-rowData let-rowIndex="rowIndex">
+            <tr>
+                <td>{{rowData.chassi}}</td>
+                <td>{{rowData.ano}}</td>
+                <td>{{rowData.cor}}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
+
+
+
+<div class='content'>
+    <h3>Subheader</h3>
+    <p-table [value]="cars" sortField="brand" sortMode="single" (onSort)="onSort()">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Chassi</th>
+                <th>Ano</th>
+                <th>Cor</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-rowData let-rowIndex="rowIndex">
+            <tr class="ui-widget-header" *ngIf="rowGroupMetadata[rowData.marca].index === rowIndex">
+                <td colspan="3">
+                    <span style="font-weight:bold">{{rowData.marca}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>{{rowData.chassi}}</td>
+                <td>{{rowData.ano}}</td>
+                <td>{{rowData.cor}}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
+
+
+
+<div class='content'>
+    <h3>Rowspan</h3>
+    <p-table [value]="cars" sortField="brand" sortMode="single" (onSort)="onSort()">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Marca</th>
+                <th>Chassi</th>
+                <th>Ano</th>
+                <th>Cor</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-rowData let-rowIndex="rowIndex">
+            <tr>
+                <td *ngIf="rowGroupMetadata[rowData.marca].index === rowIndex" [attr.rowspan]="rowGroupMetadata[rowData.marca].size">
+                    {{rowData.marca}}
+                </td>
+                <td>{{rowData.chassi}}</td>
+                <td>{{rowData.ano}}</td>
+                <td>{{rowData.cor}}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
+
+
+
+
+

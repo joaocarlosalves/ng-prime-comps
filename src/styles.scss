@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap');
+@import url('assets/css/reset.scss');
+
+body {
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+.content {
+    margin-bottom: 50px;
+}
+
+h3, .title {
+    width: 100%;
+    color: orangered;
+    font-size: 30px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    width: 100%;
+    color: gray;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    padding-top: 2px;
+    margin-top: 5px;
+    border-top: 1px solid rgba(0, 0, 0, .2);
+    display: block;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+}
+
+.full {
+    width: 100%;
+    float: left;
+    margin: 30px 0 10px;
+    border-bottom: 1px solid #cbcbcb;
+    padding-bottom: 20px;
+}
+
+.container-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.col {
+    padding: 0 20px;
+    background: red;
+}
+
+.border {
+    border: 1px solid red;
+}
+
+@media screen and (min-width: 1024px) {
+    .main-container {
+        width: calc(100% - 400px); 
+        padding: 30px;
+    }
+}
+
+.row-100p {
+    width: 100%;
+    display: block;
+    float: left;
+}
+
+code {
+    padding: 20px;
+    width: 100%;
+    height: auto;
+    color: white;
+    background: #222;
+    text-align: left;
+    border-radius: 5px;
+    display: block;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, .1);
+    font-family: Consolas;
+    white-space: pre-wrap;
+    tab-size: 4;    
+}
+
+pre {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-left: 3px solid #f36d33;
+    color: #666;
+    page-break-inside: avoid;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1em 1.5em;
+    display: block;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+@import url('assets/css/custom-theme.scss');

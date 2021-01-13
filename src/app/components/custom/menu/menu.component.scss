@@ -1,0 +1,42 @@
+
+aside {
+    width: 400px;
+    height: 100%;
+    display: block;
+    position: fixed;
+    background: #2e76a0;
+    padding: 0 0 30px 0;
+    overflow: auto;
+
+    .logo-container {
+        background: white;
+        padding: 12px 0 12px 20px;
+        position: fixed;
+        width: 400px;
+    }
+
+    /* width */
+    &::-webkit-scrollbar {
+        width: 15px;
+        cursor: pointer;
+    }
+  
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: #2e76a0;
+    }
+    
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: #225b7c;
+    }
+  
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: #1c5170;
+    }
+
+    nav {
+        margin-top: 80px;
+    }
+}

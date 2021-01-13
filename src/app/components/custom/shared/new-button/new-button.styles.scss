@@ -1,0 +1,62 @@
+/* Default Style */
+ .new-button i { 
+   margin: 9px 10px 0 0;
+   font-size: 20px;
+ }
+ 
+ .new-button span { 
+   font-size: 14px;
+   font-weight: bold;
+   float: right;
+   height: 40px;
+   line-height: 40px;
+ }
+ 
+ .new-button i.icon-right {
+   margin: 9px 0 0 10px;
+ }
+ 
+ .new-button[disabled],
+ .new-button[disabled='disabled'] {
+   opacity: .3;
+ }
+
+
+/* Default Blue Button - btnStyle="default" */
+.new-button-default {
+   background: #227AA3;
+   border-radius: 3px;
+   padding: 0 20px;
+   color: white;
+   border: 0;
+   cursor: pointer;
+   box-shadow: 0 3px 3px rgba(0, 0, 0, .1);
+   clear: both;
+   margin-right: 20px;
+   transition: all .2s ease;
+ }
+ 
+ .new-button-default:hover {
+   box-shadow: 0 3px 3px rgba(0, 0, 0, .5);
+   background: #11597a;
+ }
+
+
+ 
+ /* Gray Text Icon Button (No Background) - btnStyle="gray" */
+ .new-button-gray {
+   color: #7E7E7E;
+   border: none;
+   background: transparent;
+   padding: 0 20px;
+   cursor: pointer;
+   height: 40px;
+   line-height: 37px;
+   clear: both;
+   margin-right: 20px;
+   transition: all .2s ease;
+ }
+ 
+ .new-button-gray:hover {
+   color: #5a5a5a;
+ }

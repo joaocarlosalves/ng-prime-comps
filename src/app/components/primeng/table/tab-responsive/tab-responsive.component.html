@@ -1,0 +1,55 @@
+<div class="content">
+    <h3>Responsiva</h3>
+    <p-table [columns]="cols" [value]="cars" [responsive]="true">
+        <ng-template pTemplate="caption">
+            List of Cars
+        </ng-template>
+        <ng-template pTemplate="header" let-columns>
+            <tr>
+                <th *ngFor="let col of columns">
+                    &#123;&#123;col.header&#125;&#125;
+                </th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-rowData let-columns="columns">
+            <tr>
+                <td *ngFor="let col of columns">
+                    <span class="ui-column-title">&#123;&#123;col.header&#125;&#125;</span>
+                    &#123;&#123;rowData[col.field]&#125;&#125;
+                </td>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="summary">
+            There are &#123;&#123;cars?.length&#125;&#125; cars
+        </ng-template>
+    </p-table>
+</div>
+
+
+
+<div class="content">
+    <p-table [columns]="cols" [value]="cars">
+        <ng-template pTemplate="caption">
+            List of Cars
+        </ng-template>
+        <ng-template pTemplate="header">
+                <tr>
+                    <th>Chassi</th>
+                    <th class="ui-p-4">Ano</th>
+                    <th class="ui-p-5">Marca</th>
+                    <th class="ui-p-6">Cor</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-car>
+                <tr>
+                    <td>{{car.marca}}</td>
+                    <td class="ui-p-4">{{car.ano}}</td>
+                    <td class="ui-p-5">{{car.marca}}</td>
+                    <td class="ui-p-6">{{car.cor}}</td>
+                </tr>
+            </ng-template>
+        <ng-template pTemplate="summary">
+            There are {{cars?.length}} cars
+        </ng-template>
+    </p-table>    
+</div>

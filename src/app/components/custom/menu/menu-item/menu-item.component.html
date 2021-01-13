@@ -1,0 +1,8 @@
+<div class='acc-menu'>
+    <div class='acc-trig' (click)='toggle()'><span class='acc-title'>{{ title }}</span><span class='acc-triangle' [class.rotate]='opened'></span></div>
+    <ul *ngIf='opened'>
+        <li *ngFor='let menu of menus.list'>
+            <a [routerLink]='menu.slug'>— {{ menu.text }}</a>
+        </li>
+    </ul>
+</div>
